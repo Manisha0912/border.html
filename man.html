@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* each paaragraphs with different border styles*/
+        .p{
+            width:500px;
+            height: 150px;
+            padding: 25px;
+            border: 10px;
+            margin-top:50px;
+            background-clip: content-box;
+
+        }
+
+        #p1{
+            border-color: brown;
+            border-style: dotted;
+            background-color: aqua; <!-- Border can't be seen without background color-->
+            
+        }
+        #p2{
+            border-color:blueviolet;
+            border-style: dashed;
+            background-color: rgb(122, 158, 158); 
+            
+        }
+        #p3{
+        
+            border-top-left-radius: 5px;
+            border-style:inset;
+            background-color: chartreuse;
+            border-color: black;
+
+        }
+        #p4{
+            background-color: cadetblue;
+            border-color:midnightblue;
+            border-top-right-radius: 50px;
+            border-left-style: groove;
+
+        }
+        #p5{
+            border-top: 15px;
+            border-top-style: dotted;
+            border-top-color: indigo;
+            border-bottom: 50px;
+            border-bottom-color: crimson;
+            border-bottom-style: outset;
+            border-bottom-left-radius: 50px;
+
+        }
+        div b{ /*every child is descendant to div*/
+            color: blue;
+        }
+        div>h1{ /*targets every child*/
+            color: chartreuse;
+        }
+        div+p{/*only targets adjacent sibling*/
+            font-style: italic;
+        font-weight:bolder;
+        font-size: 40px;
+        }
+        div~b{/*targets every sibling*/
+color: crimson;
+font-size: 60px;
+        }
+ </style>
+
+</head>
+<body>
+    <div>
+    <p class="p" id="p1">This is para</p>
+    <b>bold</b>
+    <h1>Heading1</h1>
+    </div>
+    <p class="p" id="p2">Adjacent Sibling 1</p>
+    <b>General sibling1</b>
+    <div>
+    <p class="p" id="p3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, consequuntur libero? Quisquam molestias dignissimos voluptas vero dolores veniam magni pariatur harum nobis nulla, quasi cumque. Sed numquam porro eligendi esse.</p>
+    <p class="p" id="p4">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vitae deserunt repellendus aspernatur accusamus facilis quibusdam tenetur, facere alias harum. Fugiat quam voluptatum cum veritatis esse aspernatur voluptate praesentium beatae molestias.</p>
+    </div>
+    <p class="p" id="p5">Adjacent Sibling 2</p>
+    <b>General sibling2</b>
+    <b>General sibling3</b>
+</body>
+</html>
